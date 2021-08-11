@@ -1,0 +1,412 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+div#wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+div#headerFrame {
+  width: 100%;
+  height: 110px;
+  background-color: #0c2645;
+
+  position: fixed;
+}
+
+header#header {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 105px;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+div#headerLogo {
+  margin-right: 75px;
+}
+
+/* nav#maingnb 시작 */
+nav#maingnb {
+  text-align: center;
+  flex: 1;
+}
+
+#maingnb li.mainLi > a {
+  color: #fff;
+  margin: 0 28px;
+  font-size: 15px;
+  height: 106px;
+  line-height: 110px;
+  font-weight: bold;
+  display: inline-block;
+
+  z-index: 10;
+}
+
+#maingnb li.mainLi:hover > a {
+  color: #08f;
+  border-bottom: 4px solid #08f;
+}
+
+#maingnb ul.subMenu {
+  display: flex;
+  /* display: none; */
+
+  position: absolute;
+  top: 100px;
+  left: 390px;
+
+  z-index: 10;
+}
+
+#maingnb li.mainLi:first-child > .subMenu {
+  transform: translateX(-10%);
+}
+
+#maingnb li.mainLi:not(:first-child) > .subMenu {
+  transform: translateX(30%);
+}
+
+#maingnb ul.subMenu li:hover > a {
+  color: #08f;
+}
+
+#maingnb li.mainLi > ul a {
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+#lnbMenu > div:not(:last-child) > a {
+  padding: 0 23px;
+  height: 70px;
+  display: inline-block;
+}
+#lnbMenu > div:last-child > a {
+  height: 70px;
+  text-align: center;
+  padding: 0 23px 0 28px;
+}
+
+#lnbMenu {
+  height: 110px;
+}
+
+#lnbMenu span {
+  color: #fff;
+  font-size: 11px;
+  padding: 10px 0;
+  line-height: 18px;
+  border-bottom: 4px solid #08f;
+  display: inline-block;
+
+  transform: translate(11px, -72px);
+
+  visibility: hidden;
+}
+
+li.subLi > a {
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+}
+
+/* innerLi설정 시작*/
+
+#maingnb ul.subMenu2Depth > li {
+  text-align: left;
+  text-indent: 7px;
+  line-height: 22px;
+
+  position: relative;
+  top: -27px;
+  left: -6px;
+}
+#maingnb ul.subMenu2Depth > li a {
+  color: #aaa;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/* innerLi설정 끝 */
+
+/* nav#maingnb 끝 */
+
+/* div#wrap시작 */
+/* #headerLogin 시작 */
+div#headerLogin {
+  width: 1000px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-top: 110px;
+}
+
+div#headerLogin > a {
+  margin-right: 18px;
+}
+
+div#headerLogin span {
+  font-size: 14px;
+}
+/* #headerLogin 끝 */
+
+/* headerBG */
+#headerBG {
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(255, 255, 255);
+  display: none;
+
+  position: absolute;
+  top: 110px;
+
+  z-index: 0;
+}
+
+/* main#main 시작*/
+main#main {
+  width: 1000px;
+  margin: 0 auto;
+}
+#main h1 {
+  font-size: 48px;
+  text-align: center;
+  padding: 42px 0 32px 0;
+  border-bottom: 1px solid #000;
+  letter-spacing: -2.5px;
+}
+
+#main > span {
+  width: 1000px;
+  color: #444;
+  text-align: center;
+  font-size: 21px;
+  padding: 64px 0 46px 0;
+  display: inline-block;
+}
+/* main#main 끝 */
+
+#group {
+  width: 720px;
+  margin: 0 auto;
+}
+/* #loginFrame시작*/
+#loginFrame {
+  text-align: center;
+}
+
+#buttonArea {
+  justify-content: center;
+}
+
+#buttonArea button {
+  flex: 1px;
+  padding: 20px;
+  color: #aaa;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+#buttonArea button:first-child {
+  color: #3289e8;
+  border: 1px solid #3289e8;
+  border-bottom: 1px solid #fff;
+}
+
+#buttonArea button:last-child {
+  border: 1px solid #ccc;
+  border-left: none;
+  border-bottom: 1px solid #3289e8;
+  /* border-bottom-color: #fff; */
+}
+
+#loginArea {
+  width: 100%;
+  padding-top: 46px;
+}
+
+#loginArea caption {
+  font-size: 14px;
+  color: #777;
+  margin-top: 8px;
+  text-align-last: left;
+  caption-side: bottom;
+}
+
+#loginArea caption::before {
+  font-size: 18px;
+  content: "\204E";
+}
+
+#loginArea input {
+  width: 440px;
+  height: 52px;
+  padding-left: 20px;
+  border: 1px solid #aaa;
+}
+
+#loginArea input:focus {
+  border: 1px solid #fff;
+  outline: 1px solid #3289e8;
+}
+
+#loginArea input::placeholder {
+  font-size: 17px;
+  color: #aaa;
+}
+
+#loginArea button {
+  width: 238px;
+  height: 120px;
+  font-size: 22px;
+  letter-spacing: -1.3px;
+  color: #fff;
+  margin-left: 14px;
+  border: none;
+  background-color: #4690df;
+}
+
+#loginArea button:hover {
+  background-color: #4690dfdd;
+}
+
+#article {
+  margin: 0 auto;
+}
+
+#article p {
+  text-align: left;
+  font-size: 15px;
+  color: #555;
+  padding: 3px 0;
+}
+
+/* 회원가입.아이디찾기,비밀번호찾기 */
+#mainFooter {
+  padding-top: 54px;
+  margin-right: 8px;
+  height: 70px;
+  line-height: 70px;
+  justify-content: space-around;
+}
+
+#mainFooter .iconArea {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  text-align: center;
+  margin-right: 24px;
+}
+
+#mainFooter #joinIcon {
+  background-image: url(../images/icon01.png);
+  background-repeat: no-repeat;
+  background-size: 35px 27px;
+  background-position: center;
+}
+#mainFooter #joinArea:hover #joinIcon {
+  background-image: url(../images/icon01_on.png);
+}
+
+#mainFooter #idFindIcon {
+  background-image: url(../images/icon02.png);
+  background-repeat: no-repeat;
+  background-size: 34px 27px;
+  background-position: center;
+}
+
+#mainFooter #idFindArea:hover #idFindIcon {
+  background-image: url(../images/icon02_on.png);
+}
+
+#mainFooter #pwIcon {
+  background-image: url(../images/icon03.png);
+  background-repeat: no-repeat;
+  background-size: 31px 28px;
+  background-position: center;
+}
+#mainFooter #pwFindArea:hover #pwIcon {
+  background-image: url(../images/icon03_on.png);
+}
+
+#mainFooter > div {
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+}
+
+#mainFooter > div:hover span {
+  color: #4690df;
+}
+
+#mainFooter > div:hover .iconArea {
+  background-color: #4690df;
+}
+
+/* footer시작 */
+#footerArea {
+  width: 100%;
+  margin-top: 205px;
+  text-align: center;
+  background-color: #0c2645;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: 110px;
+}
+
+footer#footer {
+  width: 1200px;
+  height: 225px;
+  padding: 65px 0 110px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div#footerGnb {
+  font-size: 16px;
+  text-align: center;
+
+  display: inline-block;
+}
+
+div#footerGnb li {
+  text-align: center;
+}
+
+div#footerGnb > ul > li span {
+  color: #fff;
+  vertical-align: middle;
+  letter-spacing: -1px;
+  display: inline-block;
+}
+
+div#footerGnb > ul > li img {
+  padding: 0 3px;
+}
+
+div#footerGnb > ul > li:not(:nth-child(3)) span {
+  margin-right: 50px;
+}
+
+#footerLogo {
+  padding: 50px 0 30px;
+}
+
+#copyright p,
+#copyright address {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  line-height: 25px;
+  font-style: normal;
+
+  display: inline;
+}
